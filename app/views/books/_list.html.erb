@@ -1,0 +1,17 @@
+        <h1>New book</h1>
+        <%= form_for(book, url: books_path) do |f| %>
+          <div>
+            <label>Title</label>
+            <br>
+            <%= f.text_field :title %>
+          </div>
+          <br>
+          <div>
+            <label>Opinion</label>
+            <br>
+            <%= f.text_area :body, rows:"3" %>
+          </div>
+          <br>
+          <%= f.submit "Create Book" %>
+          <br>
+        <% end %>
